@@ -1,4 +1,3 @@
-//import { isNull } from 'util';
 import { Satellite } from './satellite';
 
 describe('Satellite', () => {
@@ -7,6 +6,9 @@ describe('Satellite', () => {
     satellite = new Satellite("foo", "bar", "baz", "lur", false);
   });
 
+  afterEach(() => {
+	  satellite = null;
+  });
 
   it('should create an instance', () => {
     expect(satellite).toBeTruthy();
