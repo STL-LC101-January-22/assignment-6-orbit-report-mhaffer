@@ -10,6 +10,10 @@ export class OrbitCountsComponent implements OnInit {
 
 	@Input() satellites: Satellite[];
 
+	count: number;
+	total: number;
+	
+
   constructor() { }
 
   ngOnInit() {
@@ -27,5 +31,9 @@ export class OrbitCountsComponent implements OnInit {
 	return count;
  }
 
+ findTotalOfAllTypes (satellites) {
+    this.total = satellites.length;
+    return this.total;
+  }
 
 }
