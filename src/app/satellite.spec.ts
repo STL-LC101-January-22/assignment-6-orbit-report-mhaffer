@@ -2,18 +2,7 @@ import { Satellite } from './satellite';
 
 
 describe('Satellite', () => {
-  it('should create an instance', () => {
-    expect(new Satellite()).toBeTruthy();
-  });
-});
- 
- 
- 
- 
- 
- 
- 
- /*  let satellite: Satellite;
+  let satellite: Satellite;
   beforeEach(() => {
     satellite = new Satellite("foo", "bar", "baz", "lur", false);
   });
@@ -27,17 +16,17 @@ describe('Satellite', () => {
   });
 
   it('should contain an isSpaceDebris method', () => {
-    expect(satellite.isSpaceDebris).toEqual(jasmine.any(Function));
+    expect(satellite.spaceDebris).toEqual(jasmine.any(Function));
   });
 
   it('isSpaceDebris should return false if not debris type', () => {
-    expect(satellite.isSpaceDebris()).toEqual(false);
+    expect(satellite.spaceDebris()).toEqual(false);
   });
 
   it('isSpaceDebris should return true if debris type', () => {
     let junk = new Satellite("foo", "Space Debris", "baz", "lur", false);
-    expect(junk.isSpaceDebris()).toEqual(true);
+    expect(junk.spaceDebris()).toEqual(true);
   });
 
  
-}); */
+});
