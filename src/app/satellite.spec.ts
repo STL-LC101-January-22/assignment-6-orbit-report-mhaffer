@@ -7,7 +7,6 @@ describe('Satellite', () => {
   });
 
   afterEach(() => {
-	  satellite = null;
   });
 
   it('should create an instance', () => {
