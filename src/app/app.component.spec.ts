@@ -5,38 +5,30 @@ import { OrbitCountsComponent } from './orbit-counts/orbit-counts.component';
 import { OrbitListComponent } from './orbit-list/orbit-list.component';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
-  let element: DebugElement;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent,
-		  OrbitListComponent,
-		  OrbitCountsComponent
+        AppComponent
       ],
     }).compileComponents();
   }));
 
-  beforeEach(() => {
-	fixture = TestBed.createComponent(AppComponent);
-	component = fixture.debugElement.componentInstance;
-	element = fixture.debugElement;
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+  });
 
-	fixture.detectChanges();
- });
+  it(`should have as title 'orbit-report'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('orbit-report');
+  });
 
- it('should create', () => {
-	expect(component).toBeTruthy();
- });
-
- it('should contain the list component', async(() => {
-	const fixture = TestBed.createComponent(AppComponent);
-	fixture.detectChanges();
-	const compiled = fixture.debugElement.nativeElement;
-	expect(compiled.querySelector('app-orbit-list')).not.toBe("");
- }));
-
-
+  it('should render title in a h1 tag', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to orbit-report!');
+  });
 });
