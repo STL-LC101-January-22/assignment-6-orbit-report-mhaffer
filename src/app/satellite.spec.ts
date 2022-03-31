@@ -1,6 +1,5 @@
 import { Satellite } from './satellite';
 
-
 describe('Satellite', () => {
   let satellite: Satellite;
   beforeEach(() => {
@@ -16,16 +15,16 @@ describe('Satellite', () => {
   });
 
   it('should contain an isSpaceDebris method', () => {
-    expect(satellite.spaceDebris).toEqual(jasmine.any(Function));
+    expect(satellite.isSpaceDebris).toEqual(jasmine.any(Function));
   });
 
   it('isSpaceDebris should return false if not debris type', () => {
-    expect(satellite.spaceDebris()).toEqual(false);
+    expect(satellite.isSpaceDebris()).toEqual(false);
   });
 
   it('isSpaceDebris should return true if debris type', () => {
     let junk = new Satellite("foo", "Space Debris", "baz", "lur", false);
-    expect(junk.spaceDebris()).toEqual(true);
+    expect(junk.isSpaceDebris()).toEqual(true);
   });
 
  
